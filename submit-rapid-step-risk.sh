@@ -1,10 +1,10 @@
 # ---------------------------------------------------------------------------
-# Submit sparkpykafkajoin.py to the Spark cluster.
-# Works in both the Udacity workspace (/data/spark) and Docker (bitnami).
+# Submit sparkpyrapidstepriskscore.py to the Spark cluster.
+# Standout feature: calculates risk score from RapidStepTest data and
+# compares it against the official STEDI risk score side-by-side.
 # ---------------------------------------------------------------------------
 set -e
 
-# Detect Spark home
 if [ -d "/data/spark" ]; then
   export SPARK_HOME=/data/spark
 elif [ -d "/opt/bitnami/spark" ]; then
@@ -20,9 +20,5 @@ mkdir -p /home/workspace/spark/logs
 $SPARK_HOME/bin/spark-submit \
   --master spark://spark-master:7077 \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.5 \
-  --conf spark.sql.shuffle.partitions=2 \
-  --conf spark.executor.heartbeatInterval=20s \
-  --conf spark.network.timeout=300s \
-  --conf spark.executor.extraJavaOptions="-XX:+UseG1GC" \
-  /home/workspace/sparkpykafkajoin.py \
-  2>&1 | tee /home/workspace/spark/logs/kafkajoin.log
+  /home/workspace/sparkpyrapidstepriskscore.py \
+  2>&1 | tee /home/workspace/spark/logs/rapid-step-risk.log

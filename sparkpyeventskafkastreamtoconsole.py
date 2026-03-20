@@ -1,32 +1,69 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col, unbase64, base64, split
-from pyspark.sql.types import StructField, StructType, StringType, BooleanType, ArrayType, DateType
+from pyspark.sql.types import StructField, StructType, StringType, BooleanType, ArrayType, DateType, FloatType
 
-# TO-DO: using the spark application object, read a streaming dataframe from the Kafka topic stedi-events as the source
-# Be sure to specify the option that reads all the events from the topic including those that were published before you started the spark stream
-                                   
-# TO-DO: cast the value column in the streaming dataframe as a STRING 
 
-# TO-DO: parse the JSON from the single column "value" with a json object in it, like this:
+# Create a SparkSession, with the name: STEDI Event Stream
+spark = SparkSession.builder \
+    .appName("STEDI Event Stream") \
+    .getOrCreate()
+
+# Set log level to WARN to reduce noise
+spark.sparkContext.setLogLevel("WARN")
+
+
+# Define the schema for the stedi-events topic JSON
+stediEventsSchema = StructType([
+    StructField("customer", StringType()),
+    StructField("score", FloatType()),
+    StructField("riskDate", StringType())
+])
+
+# Read a streaming dataframe from the Kafka topic stedi-events as the source
+# startingOffsets=earliest ensures all historical events are read too
+stediEventsRawStreamingDF = spark \
+    .readStream \
+    .format("kafka") \
+    .option("kafka.bootstrap.servers", "kafka:19092") \
+    .option("subscribe", "stedi-events") \
+    .option("startingOffsets", "earliest") \
+    .load()
+
+# Cast the value column in the streaming dataframe as a STRING
+stediEventsStreamingDF = stediEventsRawStreamingDF.selectExpr("cast(value as string) value")
+
 # +------------+
 # | value      |
 # +------------+
 # |{"custom"...|
 # +------------+
-#
-# and create separated fields like this:
+
+# Parse the JSON from the single "value" column using the defined schema
+# Store result in a temporary view called CustomerRisk
+stediEventsStreamingDF \
+    .withColumn("value", from_json("value", stediEventsSchema)) \
+    .select(col("value.*")) \
+    .createOrReplaceTempView("CustomerRisk")
+
 # +------------+-----+-----------+
 # |    customer|score| riskDate  |
 # +------------+-----+-----------+
 # |"sam@tes"...| -1.4| 2020-09...|
 # +------------+-----+-----------+
-#
-# storing them in a temporary view called CustomerRisk
-# TO-DO: execute a sql statement against a temporary view, selecting the customer and the score from the temporary view, creating a dataframe called customerRiskStreamingDF
-# TO-DO: sink the customerRiskStreamingDF dataframe to the console in append mode
-# 
-# It should output like this:
-#
+
+# Execute a SQL statement against CustomerRisk temporary view,
+# selecting customer and score
+customerRiskStreamingDF = spark.sql("SELECT customer, score FROM CustomerRisk")
+
+# Sink the customerRiskStreamingDF dataframe to the console in append mode
+customerRiskStreamingDF \
+    .writeStream \
+    .outputMode("append") \
+    .format("console") \
+    .start() \
+    .awaitTermination()
+
+# The output will look like:
 # +--------------------+-----
 # |customer           |score|
 # +--------------------+-----+

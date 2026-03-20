@@ -1,0 +1,24 @@
+# Environment / secrets
+.env
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Spark logs (generated at runtime)
+spark/logs/*.log
+spark/logs/.ipynb_checkpoints/
+
+# Temp / OS
+.tempfile
+.workspace-config.json
+.DS_Store
