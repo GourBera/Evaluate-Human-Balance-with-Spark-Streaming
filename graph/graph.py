@@ -2,7 +2,6 @@ import json
 import os
 import threading
 import time
-from collections import defaultdict
 from datetime import datetime, timezone
 
 from flask import Flask, jsonify, Response
@@ -80,22 +79,15 @@ def consume_customer_risk():
 
 
 def aggregate_by_birth_year():
-    # Return avg score by birth year for the active minute window.
+    # Return individual data points as {x: birthYear, y: score} for scatter plot.
     with state_lock:
-        grouped = defaultdict(list)
+        points = []
         for row in window_scores.values():
-            grouped[row["birthYear"]].append(row["score"])
-
-        years = sorted(grouped.keys())
-        values = []
-        for year in years:
-            scores = grouped[year]
-            values.append(round(sum(scores) / len(scores), 4))
+            points.append({"x": int(row["birthYear"]), "y": row["score"]})
 
         return {
             "window": current_window,
-            "labels": years,
-            "values": values,
+            "points": points,
             "count": len(window_scores),
         }
 
@@ -124,7 +116,7 @@ def index():
   <body>
     <div class=\"wrap\">
       <h2>STEDI Population Risk Change by Birth Year (below zero is deterioration, greater than zero is improvement)</h2>
-      <div class=\"sub\">Spark Result Set (graph resets every minute)</div>
+      <div class=\"sub\">Spark Result Set (since we see data for every customer every minute, the graph reads every minute)</div>
       <div id=\"meta\" class=\"meta\">Loading...</div>
       <div class=\"card\">
         <canvas id=\"riskChart\"></canvas>
@@ -136,18 +128,15 @@ def index():
       const meta = document.getElementById('meta');
 
       const chart = new Chart(ctx, {
-        type: 'line',
+        type: 'scatter',
         data: {
-          labels: [],
           datasets: [{
-            label: 'Spark Result Set',
+            label: 'Spark Result Set (since we see data for every customer every minute, the graph reads every minute)',
             data: [],
+            backgroundColor: '#e96a82',
             borderColor: '#e96a82',
-            backgroundColor: 'rgba(233, 106, 130, 0.2)',
-            borderWidth: 3,
             pointRadius: 5,
-            fill: false,
-            tension: 0.25
+            pointHoverRadius: 7
           }]
         },
         options: {
@@ -155,12 +144,14 @@ def index():
           maintainAspectRatio: false,
           scales: {
             y: {
-              suggestedMin: -1,
-              suggestedMax: 1,
-              title: { display: true, text: 'Average Risk Score' }
+              suggestedMin: -40,
+              suggestedMax: 20,
+              title: { display: false }
             },
             x: {
-              title: { display: true, text: 'Birth Year' }
+              suggestedMin: 1900,
+              suggestedMax: 2000,
+              title: { display: false }
             }
           }
         }
@@ -171,8 +162,7 @@ def index():
           const res = await fetch('/api/data');
           const data = await res.json();
 
-          chart.data.labels = data.labels;
-          chart.data.datasets[0].data = data.values;
+          chart.data.datasets[0].data = data.points;
           chart.update();
 
           meta.textContent = `Window: ${data.window || 'n/a'} UTC | Customers in window: ${data.count}`;

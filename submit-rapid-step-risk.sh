@@ -1,3 +1,4 @@
+#!/bin/bash
 # ---------------------------------------------------------------------------
 # Submit sparkpyrapidstepriskscore.py to the Spark cluster.
 # Standout feature: calculates risk score from RapidStepTest data and

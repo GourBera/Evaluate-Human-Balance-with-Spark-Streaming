@@ -1,3 +1,4 @@
+#!/bin/bash
 # ---------------------------------------------------------------------------
 # Submit sparkpykafkajoin.py to the Spark cluster.
 # Works in both the Udacity workspace (/data/spark) and Docker (bitnami).
