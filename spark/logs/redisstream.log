@@ -1,0 +1,224 @@
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.apache.spark#spark-sql-kafka-0-10_2.11 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-64af3720-29c5-4808-b5ec-151be5d5bd56;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.11;2.4.5 in central
+	found org.apache.kafka#kafka-clients;2.0.0 in central
+	found org.lz4#lz4-java;1.4.0 in central
+	found org.xerial.snappy#snappy-java;1.1.7.3 in central
+	found org.slf4j#slf4j-api;1.7.16 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+:: resolution report :: resolve 505ms :: artifacts dl 8ms
+	:: modules in use:
+	org.apache.kafka#kafka-clients;2.0.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.11;2.4.5 from central in [default]
+	org.lz4#lz4-java;1.4.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.16 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.7.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   6   |   0   |   0   |   0   ||   6   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-64af3720-29c5-4808-b5ec-151be5d5bd56
+	confs: [default]
+	0 artifacts copied, 6 already retrieved (0kB/10ms)
+26/03/24 16:15:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+26/03/24 16:15:34 INFO SparkContext: Running Spark version 2.4.5
+26/03/24 16:15:34 INFO SparkContext: Submitted application: STEDI Redis-Kafka Stream to Console
+26/03/24 16:15:34 INFO SecurityManager: Changing view acls to: root
+26/03/24 16:15:34 INFO SecurityManager: Changing modify acls to: root
+26/03/24 16:15:34 INFO SecurityManager: Changing view acls groups to: 
+26/03/24 16:15:34 INFO SecurityManager: Changing modify acls groups to: 
+26/03/24 16:15:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+26/03/24 16:15:35 INFO Utils: Successfully started service 'sparkDriver' on port 35335.
+26/03/24 16:15:35 INFO SparkEnv: Registering MapOutputTracker
+26/03/24 16:15:35 INFO SparkEnv: Registering BlockManagerMaster
+26/03/24 16:15:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/03/24 16:15:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/03/24 16:15:35 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-805c97fd-553e-4e51-a636-d6fea095b218
+26/03/24 16:15:35 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+26/03/24 16:15:35 INFO SparkEnv: Registering OutputCommitCoordinator
+26/03/24 16:15:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/03/24 16:15:35 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://d597be001265:4040
+26/03/24 16:15:35 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar at spark://d597be001265:35335/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar with timestamp 1774368935458
+26/03/24 16:15:35 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar at spark://d597be001265:35335/jars/org.apache.kafka_kafka-clients-2.0.0.jar with timestamp 1774368935459
+26/03/24 16:15:35 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://d597be001265:35335/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1774368935459
+26/03/24 16:15:35 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar at spark://d597be001265:35335/jars/org.lz4_lz4-java-1.4.0.jar with timestamp 1774368935460
+26/03/24 16:15:35 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar at spark://d597be001265:35335/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar with timestamp 1774368935460
+26/03/24 16:15:35 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://d597be001265:35335/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1774368935460
+26/03/24 16:15:35 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar at spark://d597be001265:35335/files/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar with timestamp 1774368935477
+26/03/24 16:15:35 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar to /tmp/spark-58c06f8c-a2f1-464b-9839-fd8bd5955a0a/userFiles-457b6faf-ec29-45f1-aad9-80d9b212b083/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar
+26/03/24 16:15:35 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar at spark://d597be001265:35335/files/org.apache.kafka_kafka-clients-2.0.0.jar with timestamp 1774368935496
+26/03/24 16:15:35 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar to /tmp/spark-58c06f8c-a2f1-464b-9839-fd8bd5955a0a/userFiles-457b6faf-ec29-45f1-aad9-80d9b212b083/org.apache.kafka_kafka-clients-2.0.0.jar
+26/03/24 16:15:35 INFO SparkContext: Added file file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://d597be001265:35335/files/org.spark-project.spark_unused-1.0.0.jar with timestamp 1774368935508
+26/03/24 16:15:35 INFO Utils: Copying /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-58c06f8c-a2f1-464b-9839-fd8bd5955a0a/userFiles-457b6faf-ec29-45f1-aad9-80d9b212b083/org.spark-project.spark_unused-1.0.0.jar
+26/03/24 16:15:35 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar at spark://d597be001265:35335/files/org.lz4_lz4-java-1.4.0.jar with timestamp 1774368935517
+26/03/24 16:15:35 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar to /tmp/spark-58c06f8c-a2f1-464b-9839-fd8bd5955a0a/userFiles-457b6faf-ec29-45f1-aad9-80d9b212b083/org.lz4_lz4-java-1.4.0.jar
+26/03/24 16:15:35 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar at spark://d597be001265:35335/files/org.xerial.snappy_snappy-java-1.1.7.3.jar with timestamp 1774368935526
+26/03/24 16:15:35 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar to /tmp/spark-58c06f8c-a2f1-464b-9839-fd8bd5955a0a/userFiles-457b6faf-ec29-45f1-aad9-80d9b212b083/org.xerial.snappy_snappy-java-1.1.7.3.jar
+26/03/24 16:15:35 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://d597be001265:35335/files/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1774368935541
+26/03/24 16:15:35 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-58c06f8c-a2f1-464b-9839-fd8bd5955a0a/userFiles-457b6faf-ec29-45f1-aad9-80d9b212b083/org.slf4j_slf4j-api-1.7.16.jar
+26/03/24 16:15:35 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+26/03/24 16:15:35 INFO TransportClientFactory: Successfully created connection to spark-master/192.168.117.2:7077 after 31 ms (0 ms spent in bootstraps)
+26/03/24 16:15:35 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20260324161535-0001
+26/03/24 16:15:35 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20260324161535-0001/0 on worker-20260324161002-192.168.117.6-37165 (192.168.117.6:37165) with 2 core(s)
+26/03/24 16:15:35 INFO StandaloneSchedulerBackend: Granted executor ID app-20260324161535-0001/0 on hostPort 192.168.117.6:37165 with 2 core(s), 1024.0 MB RAM
+26/03/24 16:15:35 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36605.
+26/03/24 16:15:35 INFO NettyBlockTransferService: Server created on d597be001265:36605
+26/03/24 16:15:35 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/03/24 16:15:35 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20260324161535-0001/0 is now RUNNING
+26/03/24 16:15:35 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, d597be001265, 36605, None)
+26/03/24 16:15:35 INFO BlockManagerMasterEndpoint: Registering block manager d597be001265:36605 with 366.3 MB RAM, BlockManagerId(driver, d597be001265, 36605, None)
+26/03/24 16:15:35 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, d597be001265, 36605, None)
+26/03/24 16:15:35 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, d597be001265, 36605, None)
+26/03/24 16:15:36 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+26/03/24 16:15:36 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/spark-warehouse/').
+26/03/24 16:15:36 INFO SharedState: Warehouse path is 'file:/spark-warehouse/'.
+26/03/24 16:15:36 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+---------+
+|               email|birthYear|
++--------------------+---------+
+|Gail.Spencer@test...|     1963|
+|Craig.Lincoln@tes...|     1962|
+|  Edward.Wu@test.com|     1961|
+|Santosh.Phillips@...|     1960|
+|Sarah.Lincoln@tes...|     1959|
+|Sean.Howard@test.com|     1958|
+|Sarah.Clark@test.com|     1957|
+|Spencer.Davis@tes...|     1956|
+|Santosh.Fibonnaci...|     1963|
+|  Lyn.Davis@test.com|     1955|
+|Jason.Miller@test...|     1970|
+|Karen.White@test.com|     1968|
+|Brian.Johnson@tes...|     1975|
+|Rachel.Adams@test...|     1972|
+|Kevin.Brown@test.com|     1965|
+|Nancy.Wilson@test...|     1980|
+|Thomas.Garcia@tes...|     1978|
+|Laura.Martinez@te...|     1983|
+|Daniel.Robinson@t...|     1969|
+|Michelle.Lee@test...|     1974|
++--------------------+---------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++-----+---------+
+|email|birthYear|
++-----+---------+
++-----+---------+
+

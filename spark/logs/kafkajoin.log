@@ -1,0 +1,3365 @@
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.apache.spark#spark-sql-kafka-0-10_2.11 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-3d8e8ab7-0fbe-4e05-9fcd-00e8de50b84c;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.11;2.4.5 in central
+	found org.apache.kafka#kafka-clients;2.0.0 in central
+	found org.lz4#lz4-java;1.4.0 in central
+	found org.xerial.snappy#snappy-java;1.1.7.3 in central
+	found org.slf4j#slf4j-api;1.7.16 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+:: resolution report :: resolve 424ms :: artifacts dl 4ms
+	:: modules in use:
+	org.apache.kafka#kafka-clients;2.0.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.11;2.4.5 from central in [default]
+	org.lz4#lz4-java;1.4.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.16 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.7.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   6   |   0   |   0   |   0   ||   6   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-3d8e8ab7-0fbe-4e05-9fcd-00e8de50b84c
+	confs: [default]
+	0 artifacts copied, 6 already retrieved (0kB/12ms)
+26/03/24 16:21:42 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+26/03/24 16:21:43 INFO SparkContext: Running Spark version 2.4.5
+26/03/24 16:21:43 INFO SparkContext: Submitted application: STEDI Kafka Join
+26/03/24 16:21:43 INFO SecurityManager: Changing view acls to: root
+26/03/24 16:21:43 INFO SecurityManager: Changing modify acls to: root
+26/03/24 16:21:43 INFO SecurityManager: Changing view acls groups to: 
+26/03/24 16:21:43 INFO SecurityManager: Changing modify acls groups to: 
+26/03/24 16:21:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+26/03/24 16:21:43 INFO Utils: Successfully started service 'sparkDriver' on port 34929.
+26/03/24 16:21:43 INFO SparkEnv: Registering MapOutputTracker
+26/03/24 16:21:43 INFO SparkEnv: Registering BlockManagerMaster
+26/03/24 16:21:43 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/03/24 16:21:43 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/03/24 16:21:43 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-d8b72131-60e2-4f32-9274-117341bf6ef9
+26/03/24 16:21:43 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+26/03/24 16:21:43 INFO SparkEnv: Registering OutputCommitCoordinator
+26/03/24 16:21:43 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/03/24 16:21:43 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://d597be001265:4040
+26/03/24 16:21:43 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar at spark://d597be001265:34929/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar with timestamp 1774369303681
+26/03/24 16:21:43 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar at spark://d597be001265:34929/jars/org.apache.kafka_kafka-clients-2.0.0.jar with timestamp 1774369303682
+26/03/24 16:21:43 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://d597be001265:34929/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1774369303683
+26/03/24 16:21:43 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar at spark://d597be001265:34929/jars/org.lz4_lz4-java-1.4.0.jar with timestamp 1774369303683
+26/03/24 16:21:43 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar at spark://d597be001265:34929/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar with timestamp 1774369303683
+26/03/24 16:21:43 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://d597be001265:34929/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1774369303683
+26/03/24 16:21:43 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar at spark://d597be001265:34929/files/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar with timestamp 1774369303703
+26/03/24 16:21:43 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar to /tmp/spark-3b173633-075f-417b-b087-b8f48fd6e6e7/userFiles-75571f39-060a-469a-920c-57af1edbd977/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar
+26/03/24 16:21:43 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar at spark://d597be001265:34929/files/org.apache.kafka_kafka-clients-2.0.0.jar with timestamp 1774369303721
+26/03/24 16:21:43 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar to /tmp/spark-3b173633-075f-417b-b087-b8f48fd6e6e7/userFiles-75571f39-060a-469a-920c-57af1edbd977/org.apache.kafka_kafka-clients-2.0.0.jar
+26/03/24 16:21:43 INFO SparkContext: Added file file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://d597be001265:34929/files/org.spark-project.spark_unused-1.0.0.jar with timestamp 1774369303733
+26/03/24 16:21:43 INFO Utils: Copying /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-3b173633-075f-417b-b087-b8f48fd6e6e7/userFiles-75571f39-060a-469a-920c-57af1edbd977/org.spark-project.spark_unused-1.0.0.jar
+26/03/24 16:21:43 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar at spark://d597be001265:34929/files/org.lz4_lz4-java-1.4.0.jar with timestamp 1774369303742
+26/03/24 16:21:43 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar to /tmp/spark-3b173633-075f-417b-b087-b8f48fd6e6e7/userFiles-75571f39-060a-469a-920c-57af1edbd977/org.lz4_lz4-java-1.4.0.jar
+26/03/24 16:21:43 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar at spark://d597be001265:34929/files/org.xerial.snappy_snappy-java-1.1.7.3.jar with timestamp 1774369303754
+26/03/24 16:21:43 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar to /tmp/spark-3b173633-075f-417b-b087-b8f48fd6e6e7/userFiles-75571f39-060a-469a-920c-57af1edbd977/org.xerial.snappy_snappy-java-1.1.7.3.jar
+26/03/24 16:21:43 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://d597be001265:34929/files/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1774369303771
+26/03/24 16:21:43 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-3b173633-075f-417b-b087-b8f48fd6e6e7/userFiles-75571f39-060a-469a-920c-57af1edbd977/org.slf4j_slf4j-api-1.7.16.jar
+26/03/24 16:21:43 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+26/03/24 16:21:43 INFO TransportClientFactory: Successfully created connection to spark-master/192.168.117.2:7077 after 29 ms (0 ms spent in bootstraps)
+26/03/24 16:21:44 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20260324162144-0003
+26/03/24 16:21:44 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20260324162144-0003/0 on worker-20260324161002-192.168.117.6-37165 (192.168.117.6:37165) with 2 core(s)
+26/03/24 16:21:44 INFO StandaloneSchedulerBackend: Granted executor ID app-20260324162144-0003/0 on hostPort 192.168.117.6:37165 with 2 core(s), 1024.0 MB RAM
+26/03/24 16:21:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37789.
+26/03/24 16:21:44 INFO NettyBlockTransferService: Server created on d597be001265:37789
+26/03/24 16:21:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/03/24 16:21:44 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20260324162144-0003/0 is now RUNNING
+26/03/24 16:21:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, d597be001265, 37789, None)
+26/03/24 16:21:44 INFO BlockManagerMasterEndpoint: Registering block manager d597be001265:37789 with 366.3 MB RAM, BlockManagerId(driver, d597be001265, 37789, None)
+26/03/24 16:21:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, d597be001265, 37789, None)
+26/03/24 16:21:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, d597be001265, 37789, None)
+26/03/24 16:21:44 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+26/03/24 16:21:44 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/spark-warehouse/').
+26/03/24 16:21:44 INFO SharedState: Warehouse path is 'file:/spark-warehouse/'.
+26/03/24 16:21:44 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++-------------------------+------+-------------------------+---------+
+|customer                 |score |email                    |birthYear|
++-------------------------+------+-------------------------+---------+
+|Gail.Spencer@test.com    |21.72 |Gail.Spencer@test.com    |1963     |
+|Gail.Spencer@test.com    |16.76 |Gail.Spencer@test.com    |1963     |
+|Gail.Spencer@test.com    |-40.6 |Gail.Spencer@test.com    |1963     |
+|Gail.Spencer@test.com    |-4.33 |Gail.Spencer@test.com    |1963     |
+|Craig.Lincoln@test.com   |-28.27|Craig.Lincoln@test.com   |1962     |
+|Craig.Lincoln@test.com   |22.8  |Craig.Lincoln@test.com   |1962     |
+|Craig.Lincoln@test.com   |21.37 |Craig.Lincoln@test.com   |1962     |
+|Edward.Wu@test.com       |2.47  |Edward.Wu@test.com       |1961     |
+|Edward.Wu@test.com       |-2.56 |Edward.Wu@test.com       |1961     |
+|Edward.Wu@test.com       |-17.68|Edward.Wu@test.com       |1961     |
+|Santosh.Phillips@test.com|-19.01|Santosh.Phillips@test.com|1960     |
+|Santosh.Phillips@test.com|-4.13 |Santosh.Phillips@test.com|1960     |
+|Santosh.Phillips@test.com|-11.69|Santosh.Phillips@test.com|1960     |
+|Santosh.Phillips@test.com|7.14  |Santosh.Phillips@test.com|1960     |
+|Santosh.Phillips@test.com|19.03 |Santosh.Phillips@test.com|1960     |
+|Santosh.Phillips@test.com|10.14 |Santosh.Phillips@test.com|1960     |
+|Sarah.Clark@test.com     |-32.05|Sarah.Clark@test.com     |1957     |
+|Sarah.Clark@test.com     |-26.34|Sarah.Clark@test.com     |1957     |
+|Sarah.Clark@test.com     |18.2  |Sarah.Clark@test.com     |1957     |
+|Sarah.Clark@test.com     |29.57 |Sarah.Clark@test.com     |1957     |
+|Lyn.Davis@test.com       |11.98 |Lyn.Davis@test.com       |1955     |
+|Lyn.Davis@test.com       |9.53  |Lyn.Davis@test.com       |1955     |
+|Lyn.Davis@test.com       |-2.8  |Lyn.Davis@test.com       |1955     |
+|Lyn.Davis@test.com       |-23.53|Lyn.Davis@test.com       |1955     |
+|Lyn.Davis@test.com       |9.04  |Lyn.Davis@test.com       |1955     |
+|Nancy.Wilson@test.com    |-7.49 |Nancy.Wilson@test.com    |1980     |
+|Nancy.Wilson@test.com    |-28.75|Nancy.Wilson@test.com    |1980     |
+|Nancy.Wilson@test.com    |-3.43 |Nancy.Wilson@test.com    |1980     |
+|Nancy.Wilson@test.com    |10.81 |Nancy.Wilson@test.com    |1980     |
+|Nancy.Wilson@test.com    |2.68  |Nancy.Wilson@test.com    |1980     |
+|Thomas.Garcia@test.com   |25.25 |Thomas.Garcia@test.com   |1978     |
+|Thomas.Garcia@test.com   |12.33 |Thomas.Garcia@test.com   |1978     |
+|Daniel.Robinson@test.com |17.93 |Daniel.Robinson@test.com |1969     |
+|Daniel.Robinson@test.com |38.26 |Daniel.Robinson@test.com |1969     |
+|Jennifer.Hall@test.com   |-4.01 |Jennifer.Hall@test.com   |1967     |
+|Jennifer.Hall@test.com   |4.67  |Jennifer.Hall@test.com   |1967     |
+|Jennifer.Hall@test.com   |4.05  |Jennifer.Hall@test.com   |1967     |
+|Jennifer.Hall@test.com   |-8.11 |Jennifer.Hall@test.com   |1967     |
+|Jennifer.Hall@test.com   |-29.11|Jennifer.Hall@test.com   |1967     |
+|Amanda.King@test.com     |4.34  |Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |-13.67|Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |-16.9 |Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |14.04 |Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |6.8   |Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |-17.06|Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |4.83  |Amanda.King@test.com     |1985     |
+|Amanda.King@test.com     |5.9   |Amanda.King@test.com     |1985     |
+|Matthew.Scott@test.com   |12.91 |Matthew.Scott@test.com   |1979     |
+|Matthew.Scott@test.com   |-30.41|Matthew.Scott@test.com   |1979     |
+|Matthew.Scott@test.com   |-13.56|Matthew.Scott@test.com   |1979     |
++-------------------------+------+-------------------------+---------+
+only showing top 50 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sean.Howard@test.com|20.12|Sean.Howard@test.com|1958     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Kevin.Brown@test.com|15.82|Kevin.Brown@test.com|1965     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|16.96|Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Matthew.Scott@test.com|-11.03|Matthew.Scott@test.com|1979     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Matthew.Scott@test.com|-11.51|Matthew.Scott@test.com|1979     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|17.99|Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Jennifer.Hall@test.com|-7.08|Jennifer.Hall@test.com|1967     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++--------------------------+------+--------------------------+---------+
+|customer                  |score |email                     |birthYear|
++--------------------------+------+--------------------------+---------+
+|Santosh.Fibonnaci@test.com|-15.59|Santosh.Fibonnaci@test.com|1963     |
++--------------------------+------+--------------------------+---------+
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Thomas.Garcia@test.com|-18.3|Thomas.Garcia@test.com|1978     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|47.53|Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Jennifer.Hall@test.com|8.86 |Jennifer.Hall@test.com|1967     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Thomas.Garcia@test.com|5.25 |Thomas.Garcia@test.com|1978     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 15
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 16
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Lisa.Nelson@test.com|4.61 |Lisa.Nelson@test.com|1973     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 17
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sean.Howard@test.com|13.74|Sean.Howard@test.com|1958     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 18
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|7.9  |Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 19
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 20
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Lisa.Nelson@test.com|14.42|Lisa.Nelson@test.com|1973     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 21
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Amanda.King@test.com|-26.8|Amanda.King@test.com|1985     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 22
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 23
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|19.44|Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 24
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Lisa.Nelson@test.com|-12.41|Lisa.Nelson@test.com|1973     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 25
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|1.79 |Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 26
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 27
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|37.29|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 28
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Kevin.Brown@test.com|-8.96|Kevin.Brown@test.com|1965     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 29
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 30
+-------------------------------------------
++------------------------+------+------------------------+---------+
+|customer                |score |email                   |birthYear|
++------------------------+------+------------------------+---------+
+|Nancy.Wilson@test.com   |-16.37|Nancy.Wilson@test.com   |1980     |
+|Sarah.Clark@test.com    |3.13  |Sarah.Clark@test.com    |1957     |
+|Nancy.Wilson@test.com   |-1.87 |Nancy.Wilson@test.com   |1980     |
+|Lisa.Nelson@test.com    |-58.14|Lisa.Nelson@test.com    |1973     |
+|Craig.Lincoln@test.com  |-12.96|Craig.Lincoln@test.com  |1962     |
+|Stephanie.Lopez@test.com|-8.57 |Stephanie.Lopez@test.com|1964     |
+|Michelle.Lee@test.com   |38.28 |Michelle.Lee@test.com   |1974     |
+|Sarah.Lincoln@test.com  |-16.43|Sarah.Lincoln@test.com  |1959     |
++------------------------+------+------------------------+---------+
+
+-------------------------------------------
+Batch: 31
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|20.89|Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 32
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Nancy.Wilson@test.com |10.15 |Nancy.Wilson@test.com |1980     |
+|Lisa.Nelson@test.com  |-26.24|Lisa.Nelson@test.com  |1973     |
+|Thomas.Garcia@test.com|13.24 |Thomas.Garcia@test.com|1978     |
+|Lyn.Davis@test.com    |10.96 |Lyn.Davis@test.com    |1955     |
+|Jason.Miller@test.com |-7.92 |Jason.Miller@test.com |1970     |
+|William.Young@test.com|-8.94 |William.Young@test.com|1976     |
+|Brian.Johnson@test.com|-5.83 |Brian.Johnson@test.com|1975     |
+|Emily.Green@test.com  |-4.17 |Emily.Green@test.com  |1988     |
+|Jason.Miller@test.com |-12.86|Jason.Miller@test.com |1970     |
+|Sarah.Lincoln@test.com|-25.82|Sarah.Lincoln@test.com|1959     |
+|Jason.Miller@test.com |-4.23 |Jason.Miller@test.com |1970     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 33
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Gail.Spencer@test.com   |-18.5|Gail.Spencer@test.com   |1963     |
+|Stephanie.Lopez@test.com|21.37|Stephanie.Lopez@test.com|1964     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 34
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|27.73|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 35
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|25.25|Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 36
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 37
+-------------------------------------------
++-------------------------+-----+-------------------------+---------+
+|customer                 |score|email                    |birthYear|
++-------------------------+-----+-------------------------+---------+
+|Santosh.Phillips@test.com|-2.73|Santosh.Phillips@test.com|1960     |
++-------------------------+-----+-------------------------+---------+
+
+-------------------------------------------
+Batch: 38
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|William.Young@test.com|-8.92|William.Young@test.com|1976     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 39
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|-3.47|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 40
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|-4.24|Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 41
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Stephanie.Lopez@test.com|18.2 |Stephanie.Lopez@test.com|1964     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 42
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|2.89 |Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 43
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|23.32|Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 44
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|-2.23|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 45
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|-11.6|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 46
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|44.29|Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 47
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 48
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Craig.Lincoln@test.com|-29.49|Craig.Lincoln@test.com|1962     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 49
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Jason.Miller@test.com|-11.08|Jason.Miller@test.com|1970     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 50
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 51
+-------------------------------------------
++------------------+------+------------------+---------+
+|customer          |score |email             |birthYear|
++------------------+------+------------------+---------+
+|Lyn.Davis@test.com|-12.46|Lyn.Davis@test.com|1955     |
++------------------+------+------------------+---------+
+
+-------------------------------------------
+Batch: 52
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|15.05|Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 53
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Amanda.King@test.com|8.05 |Amanda.King@test.com|1985     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 54
+-------------------------------------------
++-----------------------+------+-----------------------+---------+
+|customer               |score |email                  |birthYear|
++-----------------------+------+-----------------------+---------+
+|Laura.Martinez@test.com|-25.66|Laura.Martinez@test.com|1983     |
++-----------------------+------+-----------------------+---------+
+
+-------------------------------------------
+Batch: 55
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 56
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Michelle.Lee@test.com|23.43|Michelle.Lee@test.com|1974     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 57
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Karen.White@test.com|2.17 |Karen.White@test.com|1968     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 58
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Matthew.Scott@test.com|-28.19|Matthew.Scott@test.com|1979     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 59
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|11.45|Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 60
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Sean.Howard@test.com|-24.51|Sean.Howard@test.com|1958     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 61
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 62
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|-4.65|Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 63
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Michelle.Lee@test.com|-22.72|Michelle.Lee@test.com|1974     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 64
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|William.Young@test.com|18.36|William.Young@test.com|1976     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 65
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|William.Young@test.com|30.16|William.Young@test.com|1976     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 66
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+26/03/24 16:35:43 WARN HeartbeatReceiver: Removing executor 0 with no recent heartbeats: 354742 ms exceeds timeout 300000 ms
+26/03/24 16:35:43 ERROR TaskSchedulerImpl: Lost executor 0 on 192.168.117.6: Executor heartbeat timed out after 354742 ms
+26/03/24 16:35:43 WARN TaskSetManager: Lost task 1.0 in stage 410.0 (TID 549, 192.168.117.6, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 354742 ms
+26/03/24 16:35:43 WARN TaskSetManager: Lost task 0.0 in stage 410.0 (TID 548, 192.168.117.6, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 354742 ms
+26/03/24 16:35:47 WARN TaskSetManager: Lost task 1.1 in stage 410.0 (TID 551, 192.168.117.6, executor 1): FetchFailed(null, shuffleId=272, mapId=-1, reduceId=1, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 272
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:882)
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:878)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:878)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:691)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:165)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.ZippedPartitionsRDD2.compute(ZippedPartitionsRDD.scala:89)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+26/03/24 16:35:47 WARN TaskSetManager: Lost task 0.1 in stage 410.0 (TID 550, 192.168.117.6, executor 1): FetchFailed(null, shuffleId=272, mapId=-1, reduceId=0, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 272
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:882)
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:878)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:878)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:691)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:165)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.ZippedPartitionsRDD2.compute(ZippedPartitionsRDD.scala:89)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+26/03/24 16:35:47 WARN TaskSetManager: Lost task 0.0 in stage 413.0 (TID 552, 192.168.117.6, executor 1): FetchFailed(null, shuffleId=274, mapId=-1, reduceId=0, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 274
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:882)
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:878)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:878)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:691)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:165)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.ZippedPartitionsRDD2.compute(ZippedPartitionsRDD.scala:89)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+26/03/24 16:35:47 WARN TaskSetManager: Lost task 1.0 in stage 413.0 (TID 553, 192.168.117.6, executor 1): FetchFailed(null, shuffleId=274, mapId=-1, reduceId=1, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 274
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:882)
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:878)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:878)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:691)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:165)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.ZippedPartitionsRDD2.compute(ZippedPartitionsRDD.scala:89)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+-------------------------------------------
+Batch: 67
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Nancy.Wilson@test.com |-0.72 |Nancy.Wilson@test.com |1980     |
+|Thomas.Garcia@test.com|0.79  |Thomas.Garcia@test.com|1978     |
+|Lyn.Davis@test.com    |5.47  |Lyn.Davis@test.com    |1955     |
+|Amanda.King@test.com  |35.71 |Amanda.King@test.com  |1985     |
+|Andrew.Baker@test.com |0.16  |Andrew.Baker@test.com |1966     |
+|Spencer.Davis@test.com|28.4  |Spencer.Davis@test.com|1956     |
+|Brian.Johnson@test.com|-6.68 |Brian.Johnson@test.com|1975     |
+|Karen.White@test.com  |-30.76|Karen.White@test.com  |1968     |
+|Robert.Taylor@test.com|-11.79|Robert.Taylor@test.com|1982     |
+|Rachel.Adams@test.com |-34.87|Rachel.Adams@test.com |1972     |
+|Michelle.Lee@test.com |-49.99|Michelle.Lee@test.com |1974     |
+|Robert.Taylor@test.com|-13.28|Robert.Taylor@test.com|1982     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 68
+-------------------------------------------
++---------------------------+------+---------------------------+---------+
+|customer                   |score |email                      |birthYear|
++---------------------------+------+---------------------------+---------+
+|Christopher.Wright@test.com|33.61 |Christopher.Wright@test.com|1971     |
+|Christopher.Wright@test.com|5.79  |Christopher.Wright@test.com|1971     |
+|Christopher.Wright@test.com|8.17  |Christopher.Wright@test.com|1971     |
+|Jennifer.Hall@test.com     |-8.9  |Jennifer.Hall@test.com     |1967     |
+|Lisa.Nelson@test.com       |28.26 |Lisa.Nelson@test.com       |1973     |
+|Santosh.Phillips@test.com  |-17.78|Santosh.Phillips@test.com  |1960     |
+|Amanda.King@test.com       |9.06  |Amanda.King@test.com       |1985     |
+|Christopher.Wright@test.com|-24.08|Christopher.Wright@test.com|1971     |
+|Thomas.Garcia@test.com     |-21.08|Thomas.Garcia@test.com     |1978     |
+|Amanda.King@test.com       |-9.91 |Amanda.King@test.com       |1985     |
+|Jennifer.Hall@test.com     |12.52 |Jennifer.Hall@test.com     |1967     |
+|Gail.Spencer@test.com      |-26.78|Gail.Spencer@test.com      |1963     |
+|Lyn.Davis@test.com         |8.38  |Lyn.Davis@test.com         |1955     |
+|Daniel.Robinson@test.com   |17.84 |Daniel.Robinson@test.com   |1969     |
+|Thomas.Garcia@test.com     |-20.13|Thomas.Garcia@test.com     |1978     |
+|Amanda.King@test.com       |-6.35 |Amanda.King@test.com       |1985     |
+|Thomas.Garcia@test.com     |-1.89 |Thomas.Garcia@test.com     |1978     |
+|Santosh.Phillips@test.com  |-16.97|Santosh.Phillips@test.com  |1960     |
+|Edward.Wu@test.com         |-8.87 |Edward.Wu@test.com         |1961     |
+|Lisa.Nelson@test.com       |24.34 |Lisa.Nelson@test.com       |1973     |
+|Nancy.Wilson@test.com      |-12.73|Nancy.Wilson@test.com      |1980     |
+|Thomas.Garcia@test.com     |-5.74 |Thomas.Garcia@test.com     |1978     |
+|Lyn.Davis@test.com         |8.83  |Lyn.Davis@test.com         |1955     |
+|Craig.Lincoln@test.com     |-14.02|Craig.Lincoln@test.com     |1962     |
+|Amanda.King@test.com       |-18.76|Amanda.King@test.com       |1985     |
+|Matthew.Scott@test.com     |-28.47|Matthew.Scott@test.com     |1979     |
+|Lisa.Nelson@test.com       |-6.15 |Lisa.Nelson@test.com       |1973     |
+|Jennifer.Hall@test.com     |20.92 |Jennifer.Hall@test.com     |1967     |
+|Christopher.Wright@test.com|-41.63|Christopher.Wright@test.com|1971     |
+|Lisa.Nelson@test.com       |19.53 |Lisa.Nelson@test.com       |1973     |
+|Craig.Lincoln@test.com     |2.58  |Craig.Lincoln@test.com     |1962     |
+|Sarah.Clark@test.com       |19.07 |Sarah.Clark@test.com       |1957     |
+|Daniel.Robinson@test.com   |-5.63 |Daniel.Robinson@test.com   |1969     |
+|Santosh.Phillips@test.com  |-13.33|Santosh.Phillips@test.com  |1960     |
+|Daniel.Robinson@test.com   |-0.63 |Daniel.Robinson@test.com   |1969     |
+|Craig.Lincoln@test.com     |6.42  |Craig.Lincoln@test.com     |1962     |
+|Thomas.Garcia@test.com     |8.96  |Thomas.Garcia@test.com     |1978     |
+|Gail.Spencer@test.com      |-26.61|Gail.Spencer@test.com      |1963     |
+|Karen.White@test.com       |-20.97|Karen.White@test.com       |1968     |
+|Emily.Green@test.com       |2.22  |Emily.Green@test.com       |1988     |
+|Laura.Martinez@test.com    |-36.06|Laura.Martinez@test.com    |1983     |
+|Kevin.Brown@test.com       |-46.96|Kevin.Brown@test.com       |1965     |
+|Santosh.Fibonnaci@test.com |-14.94|Santosh.Fibonnaci@test.com |1963     |
+|Emily.Green@test.com       |5.25  |Emily.Green@test.com       |1988     |
+|Michelle.Lee@test.com      |-16.11|Michelle.Lee@test.com      |1974     |
+|Rachel.Adams@test.com      |-10.29|Rachel.Adams@test.com      |1972     |
+|Sarah.Lincoln@test.com     |2.35  |Sarah.Lincoln@test.com     |1959     |
+|Jason.Miller@test.com      |8.5   |Jason.Miller@test.com      |1970     |
+|Spencer.Davis@test.com     |-7.99 |Spencer.Davis@test.com     |1956     |
+|Kevin.Brown@test.com       |4.86  |Kevin.Brown@test.com       |1965     |
++---------------------------+------+---------------------------+---------+
+only showing top 50 rows
+
+26/03/24 16:42:43 WARN HeartbeatReceiver: Removing executor 1 with no recent heartbeats: 352172 ms exceeds timeout 300000 ms
+26/03/24 16:42:43 ERROR TaskSchedulerImpl: Lost executor 1 on 192.168.117.6: Executor heartbeat timed out after 352172 ms
+26/03/24 16:42:43 WARN TaskSetManager: Lost task 1.0 in stage 422.0 (TID 573, 192.168.117.6, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 352172 ms
+26/03/24 16:42:43 WARN TaskSetManager: Lost task 0.0 in stage 422.0 (TID 572, 192.168.117.6, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Executor heartbeat timed out after 352172 ms
+26/03/24 16:42:47 WARN TaskSetManager: Lost task 1.1 in stage 422.0 (TID 575, 192.168.117.6, executor 2): FetchFailed(null, shuffleId=280, mapId=-1, reduceId=1, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 280
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:882)
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:878)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:878)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:691)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:165)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.ZippedPartitionsRDD2.compute(ZippedPartitionsRDD.scala:89)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+26/03/24 16:42:47 WARN TaskSetManager: Lost task 0.1 in stage 422.0 (TID 574, 192.168.117.6, executor 2): FetchFailed(null, shuffleId=280, mapId=-1, reduceId=0, message=
+org.apache.spark.shuffle.MetadataFetchFailedException: Missing an output location for shuffle 280
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:882)
+	at org.apache.spark.MapOutputTracker$$anonfun$convertMapStatuses$2.apply(MapOutputTracker.scala:878)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:891)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1334)
+	at org.apache.spark.MapOutputTracker$.convertMapStatuses(MapOutputTracker.scala:878)
+	at org.apache.spark.MapOutputTrackerWorker.getMapSizesByExecutorId(MapOutputTracker.scala:691)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:49)
+	at org.apache.spark.sql.execution.ShuffledRowRDD.compute(ShuffledRowRDD.scala:165)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.ZippedPartitionsRDD2.compute(ZippedPartitionsRDD.scala:89)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+-------------------------------------------
+Batch: 69
+-------------------------------------------
++-------------------------+-----+-------------------------+---------+
+|customer                 |score|email                    |birthYear|
++-------------------------+-----+-------------------------+---------+
+|Santosh.Phillips@test.com|16.32|Santosh.Phillips@test.com|1960     |
++-------------------------+-----+-------------------------+---------+
+
+-------------------------------------------
+Batch: 70
+-------------------------------------------
++---------------------------+------+---------------------------+---------+
+|customer                   |score |email                      |birthYear|
++---------------------------+------+---------------------------+---------+
+|Lisa.Nelson@test.com       |35.37 |Lisa.Nelson@test.com       |1973     |
+|Amanda.King@test.com       |-19.85|Amanda.King@test.com       |1985     |
+|Daniel.Robinson@test.com   |-20.03|Daniel.Robinson@test.com   |1969     |
+|Lisa.Nelson@test.com       |12.34 |Lisa.Nelson@test.com       |1973     |
+|Santosh.Phillips@test.com  |39.02 |Santosh.Phillips@test.com  |1960     |
+|Amanda.King@test.com       |1.92  |Amanda.King@test.com       |1985     |
+|Nancy.Wilson@test.com      |35.12 |Nancy.Wilson@test.com      |1980     |
+|Craig.Lincoln@test.com     |33.47 |Craig.Lincoln@test.com     |1962     |
+|Craig.Lincoln@test.com     |10.88 |Craig.Lincoln@test.com     |1962     |
+|Matthew.Scott@test.com     |15.7  |Matthew.Scott@test.com     |1979     |
+|Daniel.Robinson@test.com   |-22.97|Daniel.Robinson@test.com   |1969     |
+|Christopher.Wright@test.com|10.73 |Christopher.Wright@test.com|1971     |
+|Lyn.Davis@test.com         |-7.31 |Lyn.Davis@test.com         |1955     |
+|Jennifer.Hall@test.com     |8.17  |Jennifer.Hall@test.com     |1967     |
+|Lisa.Nelson@test.com       |-1.47 |Lisa.Nelson@test.com       |1973     |
+|Daniel.Robinson@test.com   |4.65  |Daniel.Robinson@test.com   |1969     |
+|Nancy.Wilson@test.com      |3.79  |Nancy.Wilson@test.com      |1980     |
+|Nancy.Wilson@test.com      |-60.48|Nancy.Wilson@test.com      |1980     |
+|Edward.Wu@test.com         |31.25 |Edward.Wu@test.com         |1961     |
+|Sarah.Clark@test.com       |16.86 |Sarah.Clark@test.com       |1957     |
+|Gail.Spencer@test.com      |22.17 |Gail.Spencer@test.com      |1963     |
+|Lyn.Davis@test.com         |-27.65|Lyn.Davis@test.com         |1955     |
+|Jennifer.Hall@test.com     |6.38  |Jennifer.Hall@test.com     |1967     |
+|Nancy.Wilson@test.com      |-21.83|Nancy.Wilson@test.com      |1980     |
+|Santosh.Phillips@test.com  |-3.28 |Santosh.Phillips@test.com  |1960     |
+|Amanda.King@test.com       |4.85  |Amanda.King@test.com       |1985     |
+|Gail.Spencer@test.com      |4.86  |Gail.Spencer@test.com      |1963     |
+|Nancy.Wilson@test.com      |7.87  |Nancy.Wilson@test.com      |1980     |
+|Amanda.King@test.com       |1.32  |Amanda.King@test.com       |1985     |
+|Thomas.Garcia@test.com     |40.13 |Thomas.Garcia@test.com     |1978     |
+|Daniel.Robinson@test.com   |23.03 |Daniel.Robinson@test.com   |1969     |
+|Santosh.Phillips@test.com  |-35.41|Santosh.Phillips@test.com  |1960     |
+|Daniel.Robinson@test.com   |3.08  |Daniel.Robinson@test.com   |1969     |
+|Craig.Lincoln@test.com     |-19.84|Craig.Lincoln@test.com     |1962     |
+|Nancy.Wilson@test.com      |-12.0 |Nancy.Wilson@test.com      |1980     |
+|Karen.White@test.com       |-6.16 |Karen.White@test.com       |1968     |
+|Jason.Miller@test.com      |-2.22 |Jason.Miller@test.com      |1970     |
+|Brian.Johnson@test.com     |17.13 |Brian.Johnson@test.com     |1975     |
+|William.Young@test.com     |-3.52 |William.Young@test.com     |1976     |
+|Jason.Miller@test.com      |-29.58|Jason.Miller@test.com      |1970     |
+|William.Young@test.com     |-28.81|William.Young@test.com     |1976     |
+|Karen.White@test.com       |30.66 |Karen.White@test.com       |1968     |
+|Brian.Johnson@test.com     |-21.04|Brian.Johnson@test.com     |1975     |
+|Stephanie.Lopez@test.com   |-3.7  |Stephanie.Lopez@test.com   |1964     |
+|Brian.Johnson@test.com     |-32.36|Brian.Johnson@test.com     |1975     |
+|Santosh.Fibonnaci@test.com |23.36 |Santosh.Fibonnaci@test.com |1963     |
+|William.Young@test.com     |-31.19|William.Young@test.com     |1976     |
+|Karen.White@test.com       |5.09  |Karen.White@test.com       |1968     |
+|Sarah.Lincoln@test.com     |-31.53|Sarah.Lincoln@test.com     |1959     |
+|Brian.Johnson@test.com     |-3.86 |Brian.Johnson@test.com     |1975     |
++---------------------------+------+---------------------------+---------+
+only showing top 50 rows
+
+-------------------------------------------
+Batch: 71
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 72
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Matthew.Scott@test.com|26.82|Matthew.Scott@test.com|1979     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 73
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|-7.4 |Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 74
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 75
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Sarah.Lincoln@test.com|18.46|Sarah.Lincoln@test.com|1959     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 76
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Kevin.Brown@test.com|21.78|Kevin.Brown@test.com|1965     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 77
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Jennifer.Hall@test.com|-7.54|Jennifer.Hall@test.com|1967     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 78
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|9.67 |Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 79
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Lyn.Davis@test.com|7.75 |Lyn.Davis@test.com|1955     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 80
+-------------------------------------------
++---------------------------+-----+---------------------------+---------+
+|customer                   |score|email                      |birthYear|
++---------------------------+-----+---------------------------+---------+
+|Christopher.Wright@test.com|35.92|Christopher.Wright@test.com|1971     |
++---------------------------+-----+---------------------------+---------+
+
+-------------------------------------------
+Batch: 81
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|41.18|Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 82
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Rachel.Adams@test.com|1.43 |Rachel.Adams@test.com|1972     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 83
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|8.9  |Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 84
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|5.94 |Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 85
+-------------------------------------------
++--------------------------+------+--------------------------+---------+
+|customer                  |score |email                     |birthYear|
++--------------------------+------+--------------------------+---------+
+|Edward.Wu@test.com        |5.61  |Edward.Wu@test.com        |1961     |
+|Santosh.Phillips@test.com |3.2   |Santosh.Phillips@test.com |1960     |
+|Lisa.Nelson@test.com      |-29.44|Lisa.Nelson@test.com      |1973     |
+|Santosh.Fibonnaci@test.com|32.36 |Santosh.Fibonnaci@test.com|1963     |
+|Sean.Howard@test.com      |-26.24|Sean.Howard@test.com      |1958     |
+|Emily.Green@test.com      |-0.86 |Emily.Green@test.com      |1988     |
+|Karen.White@test.com      |-33.95|Karen.White@test.com      |1968     |
+|Laura.Martinez@test.com   |28.94 |Laura.Martinez@test.com   |1983     |
+|Emily.Green@test.com      |-16.67|Emily.Green@test.com      |1988     |
++--------------------------+------+--------------------------+---------+
+
+-------------------------------------------
+Batch: 86
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Stephanie.Lopez@test.com|1.04 |Stephanie.Lopez@test.com|1964     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 87
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Emily.Green@test.com|-23.65|Emily.Green@test.com|1988     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 88
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Robert.Taylor@test.com|0.54 |Robert.Taylor@test.com|1982     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 89
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Lyn.Davis@test.com|27.95|Lyn.Davis@test.com|1955     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 90
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 91
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Lisa.Nelson@test.com|-44.48|Lisa.Nelson@test.com|1973     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 92
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 93
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|William.Young@test.com|-25.07|William.Young@test.com|1976     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 94
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 95
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|-7.25|Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 96
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|7.44 |Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 97
+-------------------------------------------
++---------------------------+-----+---------------------------+---------+
+|customer                   |score|email                      |birthYear|
++---------------------------+-----+---------------------------+---------+
+|Christopher.Wright@test.com|8.88 |Christopher.Wright@test.com|1971     |
++---------------------------+-----+---------------------------+---------+
+
+-------------------------------------------
+Batch: 98
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 99
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|-11.7|Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 100
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Sarah.Clark@test.com|-24.64|Sarah.Clark@test.com|1957     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 101
+-------------------------------------------
++--------------------------+-----+--------------------------+---------+
+|customer                  |score|email                     |birthYear|
++--------------------------+-----+--------------------------+---------+
+|Santosh.Fibonnaci@test.com|-7.87|Santosh.Fibonnaci@test.com|1963     |
++--------------------------+-----+--------------------------+---------+
+
+-------------------------------------------
+Batch: 102
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 103
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|9.7  |Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 104
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 105
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|3.23 |Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 106
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 107
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Rachel.Adams@test.com|-14.32|Rachel.Adams@test.com|1972     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 108
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|8.49 |Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 109
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Lisa.Nelson@test.com|2.01 |Lisa.Nelson@test.com|1973     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 110
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|7.99 |Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 111
+-------------------------------------------
++------------------------+------+------------------------+---------+
+|customer                |score |email                   |birthYear|
++------------------------+------+------------------------+---------+
+|Daniel.Robinson@test.com|-24.04|Daniel.Robinson@test.com|1969     |
++------------------------+------+------------------------+---------+
+
+-------------------------------------------
+Batch: 112
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Karen.White@test.com|-18.99|Karen.White@test.com|1968     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 113
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 114
+-------------------------------------------
++---------------------------+------+---------------------------+---------+
+|customer                   |score |email                      |birthYear|
++---------------------------+------+---------------------------+---------+
+|Thomas.Garcia@test.com     |26.69 |Thomas.Garcia@test.com     |1978     |
+|Christopher.Wright@test.com|-32.89|Christopher.Wright@test.com|1971     |
+|Gail.Spencer@test.com      |-20.71|Gail.Spencer@test.com      |1963     |
+|Thomas.Garcia@test.com     |-3.11 |Thomas.Garcia@test.com     |1978     |
+|Daniel.Robinson@test.com   |1.37  |Daniel.Robinson@test.com   |1969     |
+|Michelle.Lee@test.com      |20.93 |Michelle.Lee@test.com      |1974     |
+|Robert.Taylor@test.com     |-3.0  |Robert.Taylor@test.com     |1982     |
+|Kevin.Brown@test.com       |-10.79|Kevin.Brown@test.com       |1965     |
+|Sarah.Lincoln@test.com     |15.41 |Sarah.Lincoln@test.com     |1959     |
+|Santosh.Fibonnaci@test.com |-0.39 |Santosh.Fibonnaci@test.com |1963     |
+|Santosh.Fibonnaci@test.com |12.84 |Santosh.Fibonnaci@test.com |1963     |
+|Stephanie.Lopez@test.com   |-26.28|Stephanie.Lopez@test.com   |1964     |
++---------------------------+------+---------------------------+---------+
+
+-------------------------------------------
+Batch: 115
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Amanda.King@test.com|6.18 |Amanda.King@test.com|1985     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 116
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|20.03|Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 117
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Amanda.King@test.com|27.23|Amanda.King@test.com|1985     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 118
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Jennifer.Hall@test.com|-24.12|Jennifer.Hall@test.com|1967     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 119
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|-19.5|Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 120
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Robert.Taylor@test.com|-6.48|Robert.Taylor@test.com|1982     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 121
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 122
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|-2.5 |Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 123
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Emily.Green@test.com|-23.39|Emily.Green@test.com|1988     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 124
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 125
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Sarah.Clark@test.com|-25.36|Sarah.Clark@test.com|1957     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 126
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Matthew.Scott@test.com|9.3  |Matthew.Scott@test.com|1979     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 127
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|-9.95|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 128
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|6.8  |Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 129
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Lyn.Davis@test.com|11.47|Lyn.Davis@test.com|1955     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 130
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 131
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Amanda.King@test.com|2.06 |Amanda.King@test.com|1985     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 132
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|-0.94|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 133
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Andrew.Baker@test.com|10.07|Andrew.Baker@test.com|1966     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 134
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Sarah.Clark@test.com  |27.79 |Sarah.Clark@test.com  |1957     |
+|Craig.Lincoln@test.com|-29.61|Craig.Lincoln@test.com|1962     |
+|Lisa.Nelson@test.com  |27.88 |Lisa.Nelson@test.com  |1973     |
+|William.Young@test.com|-12.73|William.Young@test.com|1976     |
+|Rachel.Adams@test.com |2.03  |Rachel.Adams@test.com |1972     |
+|Sean.Howard@test.com  |-0.03 |Sean.Howard@test.com  |1958     |
+|Brian.Johnson@test.com|32.46 |Brian.Johnson@test.com|1975     |
+|Emily.Green@test.com  |-14.32|Emily.Green@test.com  |1988     |
+|Andrew.Baker@test.com |-1.78 |Andrew.Baker@test.com |1966     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 135
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|-3.01|Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 136
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|William.Young@test.com|1.15 |William.Young@test.com|1976     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 137
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|-2.58|Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 138
+-------------------------------------------
++-------------------------+-----+-------------------------+---------+
+|customer                 |score|email                    |birthYear|
++-------------------------+-----+-------------------------+---------+
+|Santosh.Phillips@test.com|12.05|Santosh.Phillips@test.com|1960     |
++-------------------------+-----+-------------------------+---------+
+
+-------------------------------------------
+Batch: 139
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Karen.White@test.com|11.49|Karen.White@test.com|1968     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 140
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Michelle.Lee@test.com|47.5 |Michelle.Lee@test.com|1974     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 141
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 142
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|10.95|Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 143
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Spencer.Davis@test.com|-34.76|Spencer.Davis@test.com|1956     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 144
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|-10.4|Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 145
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 146
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sean.Howard@test.com|13.38|Sean.Howard@test.com|1958     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 147
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 148
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Thomas.Garcia@test.com|-2.17|Thomas.Garcia@test.com|1978     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 149
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|9.41 |Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 150
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|38.64|Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 151
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 152
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|3.24 |Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 153
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|-3.61|Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 154
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|1.56 |Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 155
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 156
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|27.45|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 157
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Daniel.Robinson@test.com|5.01 |Daniel.Robinson@test.com|1969     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 158
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|-4.38|Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 159
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|0.09 |Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 160
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Andrew.Baker@test.com|-14.06|Andrew.Baker@test.com|1966     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 161
+-------------------------------------------
++---------------------------+------+---------------------------+---------+
+|customer                   |score |email                      |birthYear|
++---------------------------+------+---------------------------+---------+
+|Christopher.Wright@test.com|-45.12|Christopher.Wright@test.com|1971     |
++---------------------------+------+---------------------------+---------+
+
+-------------------------------------------
+Batch: 162
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Michelle.Lee@test.com|22.18|Michelle.Lee@test.com|1974     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 163
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 164
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Kevin.Brown@test.com|-12.93|Kevin.Brown@test.com|1965     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 165
+-------------------------------------------
++------------------------+------+------------------------+---------+
+|customer                |score |email                   |birthYear|
++------------------------+------+------------------------+---------+
+|Daniel.Robinson@test.com|-20.65|Daniel.Robinson@test.com|1969     |
++------------------------+------+------------------------+---------+
+
+-------------------------------------------
+Batch: 166
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Karen.White@test.com|23.3 |Karen.White@test.com|1968     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 167
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|40.38|Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 168
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Michelle.Lee@test.com|-24.8|Michelle.Lee@test.com|1974     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 169
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Matthew.Scott@test.com|3.04 |Matthew.Scott@test.com|1979     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 170
+-------------------------------------------
++------------------+------+------------------+---------+
+|customer          |score |email             |birthYear|
++------------------+------+------------------+---------+
+|Edward.Wu@test.com|-17.26|Edward.Wu@test.com|1961     |
++------------------+------+------------------+---------+
+
+-------------------------------------------
+Batch: 171
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|20.37|Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 172
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|19.76|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 173
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 174
+-------------------------------------------
++---------------------------+-----+---------------------------+---------+
+|customer                   |score|email                      |birthYear|
++---------------------------+-----+---------------------------+---------+
+|Christopher.Wright@test.com|10.41|Christopher.Wright@test.com|1971     |
++---------------------------+-----+---------------------------+---------+
+
+-------------------------------------------
+Batch: 175
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|-5.49|Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 176
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 177
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Brian.Johnson@test.com|-27.89|Brian.Johnson@test.com|1975     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 178
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Sarah.Lincoln@test.com|-10.22|Sarah.Lincoln@test.com|1959     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 179
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|23.04|Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 180
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Lisa.Nelson@test.com  |-15.51|Lisa.Nelson@test.com  |1973     |
+|Gail.Spencer@test.com |-14.18|Gail.Spencer@test.com |1963     |
+|Jennifer.Hall@test.com|-29.42|Jennifer.Hall@test.com|1967     |
+|Amanda.King@test.com  |-28.06|Amanda.King@test.com  |1985     |
+|Amanda.King@test.com  |-4.43 |Amanda.King@test.com  |1985     |
+|Nancy.Wilson@test.com |40.1  |Nancy.Wilson@test.com |1980     |
+|Gail.Spencer@test.com |-2.37 |Gail.Spencer@test.com |1963     |
+|Spencer.Davis@test.com|-37.27|Spencer.Davis@test.com|1956     |
+|Kevin.Brown@test.com  |-24.51|Kevin.Brown@test.com  |1965     |
+|Spencer.Davis@test.com|15.81 |Spencer.Davis@test.com|1956     |
+|Rachel.Adams@test.com |-4.69 |Rachel.Adams@test.com |1972     |
++----------------------+------+----------------------+---------+
+
+26/03/24 16:55:28 WARN TaskSetManager: Lost task 1.0 in stage 1079.0 (TID 1455, 192.168.117.6, executor 2): org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+
+-------------------------------------------
+Batch: 181
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Matthew.Scott@test.com|-16.03|Matthew.Scott@test.com|1979     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 182
+-------------------------------------------
++---------------------------+------+---------------------------+---------+
+|customer                   |score |email                      |birthYear|
++---------------------------+------+---------------------------+---------+
+|Christopher.Wright@test.com|29.61 |Christopher.Wright@test.com|1971     |
+|Lyn.Davis@test.com         |21.6  |Lyn.Davis@test.com         |1955     |
+|Lyn.Davis@test.com         |11.58 |Lyn.Davis@test.com         |1955     |
+|Edward.Wu@test.com         |7.29  |Edward.Wu@test.com         |1961     |
+|Andrew.Baker@test.com      |-11.85|Andrew.Baker@test.com      |1966     |
+|Robert.Taylor@test.com     |16.93 |Robert.Taylor@test.com     |1982     |
+|Laura.Martinez@test.com    |-7.45 |Laura.Martinez@test.com    |1983     |
+|Stephanie.Lopez@test.com   |-18.29|Stephanie.Lopez@test.com   |1964     |
+|Santosh.Fibonnaci@test.com |-22.67|Santosh.Fibonnaci@test.com |1963     |
+|Michelle.Lee@test.com      |-9.38 |Michelle.Lee@test.com      |1974     |
++---------------------------+------+---------------------------+---------+
+
+-------------------------------------------
+Batch: 183
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 184
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Jason.Miller@test.com|-16.23|Jason.Miller@test.com|1970     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 185
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Lisa.Nelson@test.com|-12.8|Lisa.Nelson@test.com|1973     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 186
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 187
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|-57.2|Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 188
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Gail.Spencer@test.com|-8.37|Gail.Spencer@test.com|1963     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 189
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|-4.76|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 190
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Matthew.Scott@test.com|-28.65|Matthew.Scott@test.com|1979     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 191
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Rachel.Adams@test.com|-39.34|Rachel.Adams@test.com|1972     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 192
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Sarah.Lincoln@test.com|-16.57|Sarah.Lincoln@test.com|1959     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 193
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Thomas.Garcia@test.com|7.13 |Thomas.Garcia@test.com|1978     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 194
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Matthew.Scott@test.com|0.73 |Matthew.Scott@test.com|1979     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 195
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|8.32 |Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 196
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 197
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|19.22|Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 198
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 199
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|4.03 |Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 200
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Rachel.Adams@test.com|8.02 |Rachel.Adams@test.com|1972     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 201
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|21.77|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 202
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|1.21 |Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 203
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Craig.Lincoln@test.com|-31.11|Craig.Lincoln@test.com|1962     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 204
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Jennifer.Hall@test.com|10.95|Jennifer.Hall@test.com|1967     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 205
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 206
+-------------------------------------------
++--------------------------+------+--------------------------+---------+
+|customer                  |score |email                     |birthYear|
++--------------------------+------+--------------------------+---------+
+|Santosh.Fibonnaci@test.com|-25.01|Santosh.Fibonnaci@test.com|1963     |
++--------------------------+------+--------------------------+---------+
+
+-------------------------------------------
+Batch: 207
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 208
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|1.11 |Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 209
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Michelle.Lee@test.com|11.7 |Michelle.Lee@test.com|1974     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 210
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 211
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|7.83 |Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 212
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Sarah.Lincoln@test.com|22.42|Sarah.Lincoln@test.com|1959     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 213
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|William.Young@test.com|1.02 |William.Young@test.com|1976     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 214
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|20.16|Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 215
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 216
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|5.71 |Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 217
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 218
+-------------------------------------------
++---------------------------+------+---------------------------+---------+
+|customer                   |score |email                      |birthYear|
++---------------------------+------+---------------------------+---------+
+|Christopher.Wright@test.com|-18.87|Christopher.Wright@test.com|1971     |
++---------------------------+------+---------------------------+---------+
+
+-------------------------------------------
+Batch: 219
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Emily.Green@test.com|25.48|Emily.Green@test.com|1988     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 220
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 221
+-------------------------------------------
++---------------------------+-----+---------------------------+---------+
+|customer                   |score|email                      |birthYear|
++---------------------------+-----+---------------------------+---------+
+|Christopher.Wright@test.com|3.06 |Christopher.Wright@test.com|1971     |
++---------------------------+-----+---------------------------+---------+
+
+-------------------------------------------
+Batch: 222
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Jason.Miller@test.com|-16.54|Jason.Miller@test.com|1970     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 223
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Robert.Taylor@test.com|24.02|Robert.Taylor@test.com|1982     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 224
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|-38.2|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 225
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 226
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Jennifer.Hall@test.com|19.02|Jennifer.Hall@test.com|1967     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 227
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Nancy.Wilson@test.com|-14.18|Nancy.Wilson@test.com|1980     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 228
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|11.26|Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 229
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Brian.Johnson@test.com|-10.79|Brian.Johnson@test.com|1975     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 230
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Brian.Johnson@test.com|-4.21|Brian.Johnson@test.com|1975     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 231
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Emily.Green@test.com|10.32|Emily.Green@test.com|1988     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 232
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|9.32 |Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 233
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Lisa.Nelson@test.com|21.09|Lisa.Nelson@test.com|1973     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 234
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 235
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|22.24|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 236
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Emily.Green@test.com|-24.42|Emily.Green@test.com|1988     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 237
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Matthew.Scott@test.com|13.53|Matthew.Scott@test.com|1979     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 238
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Sarah.Lincoln@test.com|28.51|Sarah.Lincoln@test.com|1959     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 239
+-------------------------------------------
++---------------------------+-----+---------------------------+---------+
+|customer                   |score|email                      |birthYear|
++---------------------------+-----+---------------------------+---------+
+|Christopher.Wright@test.com|43.6 |Christopher.Wright@test.com|1971     |
++---------------------------+-----+---------------------------+---------+
+
+-------------------------------------------
+Batch: 240
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Emily.Green@test.com|11.22|Emily.Green@test.com|1988     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 241
+-------------------------------------------
++-------------------------+------+-------------------------+---------+
+|customer                 |score |email                    |birthYear|
++-------------------------+------+-------------------------+---------+
+|Santosh.Phillips@test.com|-31.98|Santosh.Phillips@test.com|1960     |
++-------------------------+------+-------------------------+---------+
+
+-------------------------------------------
+Batch: 242
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 243
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Emily.Green@test.com|35.53|Emily.Green@test.com|1988     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 244
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Spencer.Davis@test.com|2.17 |Spencer.Davis@test.com|1956     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 245
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 246
+-------------------------------------------
++-----------------------+------+-----------------------+---------+
+|customer               |score |email                  |birthYear|
++-----------------------+------+-----------------------+---------+
+|Laura.Martinez@test.com|-23.88|Laura.Martinez@test.com|1983     |
++-----------------------+------+-----------------------+---------+
+
+-------------------------------------------
+Batch: 247
+-------------------------------------------
++-------------------------+------+-------------------------+---------+
+|customer                 |score |email                    |birthYear|
++-------------------------+------+-------------------------+---------+
+|Santosh.Phillips@test.com|-5.94 |Santosh.Phillips@test.com|1960     |
+|Nancy.Wilson@test.com    |-17.44|Nancy.Wilson@test.com    |1980     |
+|Daniel.Robinson@test.com |8.86  |Daniel.Robinson@test.com |1969     |
+|Craig.Lincoln@test.com   |19.84 |Craig.Lincoln@test.com   |1962     |
+|Craig.Lincoln@test.com   |36.61 |Craig.Lincoln@test.com   |1962     |
+|Nancy.Wilson@test.com    |-26.44|Nancy.Wilson@test.com    |1980     |
+|Stephanie.Lopez@test.com |8.68  |Stephanie.Lopez@test.com |1964     |
+|Stephanie.Lopez@test.com |8.18  |Stephanie.Lopez@test.com |1964     |
+|Rachel.Adams@test.com    |56.82 |Rachel.Adams@test.com    |1972     |
+|Jason.Miller@test.com    |29.3  |Jason.Miller@test.com    |1970     |
++-------------------------+------+-------------------------+---------+
+
+-------------------------------------------
+Batch: 248
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 249
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Jennifer.Hall@test.com|-17.88|Jennifer.Hall@test.com|1967     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 250
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|William.Young@test.com|24.46|William.Young@test.com|1976     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 251
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|16.41|Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 252
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 253
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Daniel.Robinson@test.com|26.64|Daniel.Robinson@test.com|1969     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 254
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Robert.Taylor@test.com|-19.26|Robert.Taylor@test.com|1982     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 255
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|16.37|Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 256
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Karen.White@test.com|35.33|Karen.White@test.com|1968     |
++--------------------+-----+--------------------+---------+
+
+26/03/24 17:03:44 WARN TaskSetManager: Lost task 1.0 in stage 1508.0 (TID 2029, 192.168.117.6, executor 2): org.apache.kafka.common.errors.NetworkException: The server disconnected before a response was received.
+
+-------------------------------------------
+Batch: 257
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Jason.Miller@test.com|15.24|Jason.Miller@test.com|1970     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 258
+-------------------------------------------
++-------------------------+------+-------------------------+---------+
+|customer                 |score |email                    |birthYear|
++-------------------------+------+-------------------------+---------+
+|Sarah.Clark@test.com     |-21.5 |Sarah.Clark@test.com     |1957     |
+|Jennifer.Hall@test.com   |-7.0  |Jennifer.Hall@test.com   |1967     |
+|Santosh.Phillips@test.com|18.72 |Santosh.Phillips@test.com|1960     |
+|Amanda.King@test.com     |5.46  |Amanda.King@test.com     |1985     |
+|Lyn.Davis@test.com       |-37.71|Lyn.Davis@test.com       |1955     |
+|Lisa.Nelson@test.com     |-5.96 |Lisa.Nelson@test.com     |1973     |
+|Gail.Spencer@test.com    |-29.65|Gail.Spencer@test.com    |1963     |
+|Thomas.Garcia@test.com   |-5.54 |Thomas.Garcia@test.com   |1978     |
+|Matthew.Scott@test.com   |-23.82|Matthew.Scott@test.com   |1979     |
+|Michelle.Lee@test.com    |-10.55|Michelle.Lee@test.com    |1974     |
+|Sarah.Lincoln@test.com   |-27.61|Sarah.Lincoln@test.com   |1959     |
+|Stephanie.Lopez@test.com |-14.87|Stephanie.Lopez@test.com |1964     |
+|Michelle.Lee@test.com    |-18.45|Michelle.Lee@test.com    |1974     |
+|Karen.White@test.com     |26.81 |Karen.White@test.com     |1968     |
+|Sean.Howard@test.com     |-12.88|Sean.Howard@test.com     |1958     |
+|Sarah.Lincoln@test.com   |-55.74|Sarah.Lincoln@test.com   |1959     |
+|Kevin.Brown@test.com     |-10.97|Kevin.Brown@test.com     |1965     |
+|Sean.Howard@test.com     |-4.19 |Sean.Howard@test.com     |1958     |
+|Michelle.Lee@test.com    |12.41 |Michelle.Lee@test.com    |1974     |
+|Kevin.Brown@test.com     |20.83 |Kevin.Brown@test.com     |1965     |
+|Andrew.Baker@test.com    |22.99 |Andrew.Baker@test.com    |1966     |
++-------------------------+------+-------------------------+---------+
+
+-------------------------------------------
+Batch: 259
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Kevin.Brown@test.com|-2.99|Kevin.Brown@test.com|1965     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 260
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 261
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Sarah.Lincoln@test.com|-20.69|Sarah.Lincoln@test.com|1959     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 262
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Spencer.Davis@test.com|-23.07|Spencer.Davis@test.com|1956     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 263
+-------------------------------------------
++---------------------+-----+---------------------+---------+
+|customer             |score|email                |birthYear|
++---------------------+-----+---------------------+---------+
+|Nancy.Wilson@test.com|11.74|Nancy.Wilson@test.com|1980     |
++---------------------+-----+---------------------+---------+
+
+-------------------------------------------
+Batch: 264
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 265
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Stephanie.Lopez@test.com|11.92|Stephanie.Lopez@test.com|1964     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 266
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Thomas.Garcia@test.com|-13.82|Thomas.Garcia@test.com|1978     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 267
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Amanda.King@test.com|-11.33|Amanda.King@test.com|1985     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 268
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Sarah.Lincoln@test.com|18.95|Sarah.Lincoln@test.com|1959     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 269
+-------------------------------------------
++--------------------+------+--------------------+---------+
+|customer            |score |email               |birthYear|
++--------------------+------+--------------------+---------+
+|Sarah.Clark@test.com|-24.75|Sarah.Clark@test.com|1957     |
++--------------------+------+--------------------+---------+
+
+-------------------------------------------
+Batch: 270
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Jason.Miller@test.com|-15.92|Jason.Miller@test.com|1970     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 271
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|4.92 |Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 272
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|34.6 |Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 273
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Daniel.Robinson@test.com|-2.65|Daniel.Robinson@test.com|1969     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 274
+-------------------------------------------
++------------------+-----+------------------+---------+
+|customer          |score|email             |birthYear|
++------------------+-----+------------------+---------+
+|Edward.Wu@test.com|-7.95|Edward.Wu@test.com|1961     |
++------------------+-----+------------------+---------+
+
+-------------------------------------------
+Batch: 275
+-------------------------------------------
++-----------------------+-----+-----------------------+---------+
+|customer               |score|email                  |birthYear|
++-----------------------+-----+-----------------------+---------+
+|Laura.Martinez@test.com|21.74|Laura.Martinez@test.com|1983     |
++-----------------------+-----+-----------------------+---------+
+
+-------------------------------------------
+Batch: 276
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 277
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Thomas.Garcia@test.com|7.53 |Thomas.Garcia@test.com|1978     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 278
+-------------------------------------------
++-----------------------+------+-----------------------+---------+
+|customer               |score |email                  |birthYear|
++-----------------------+------+-----------------------+---------+
+|Amanda.King@test.com   |-21.67|Amanda.King@test.com   |1985     |
+|Gail.Spencer@test.com  |-7.2  |Gail.Spencer@test.com  |1963     |
+|Gail.Spencer@test.com  |14.18 |Gail.Spencer@test.com  |1963     |
+|William.Young@test.com |14.93 |William.Young@test.com |1976     |
+|Andrew.Baker@test.com  |9.74  |Andrew.Baker@test.com  |1966     |
+|Laura.Martinez@test.com|15.96 |Laura.Martinez@test.com|1983     |
+|Michelle.Lee@test.com  |13.86 |Michelle.Lee@test.com  |1974     |
++-----------------------+------+-----------------------+---------+
+
+-------------------------------------------
+Batch: 279
+-------------------------------------------
++------------------------+------+------------------------+---------+
+|customer                |score |email                   |birthYear|
++------------------------+------+------------------------+---------+
+|Amanda.King@test.com    |0.38  |Amanda.King@test.com    |1985     |
+|Matthew.Scott@test.com  |-5.59 |Matthew.Scott@test.com  |1979     |
+|Daniel.Robinson@test.com|4.08  |Daniel.Robinson@test.com|1969     |
+|Brian.Johnson@test.com  |3.05  |Brian.Johnson@test.com  |1975     |
+|Laura.Martinez@test.com |-3.62 |Laura.Martinez@test.com |1983     |
+|Stephanie.Lopez@test.com|18.58 |Stephanie.Lopez@test.com|1964     |
+|Michelle.Lee@test.com   |-18.3 |Michelle.Lee@test.com   |1974     |
+|William.Young@test.com  |-27.51|William.Young@test.com  |1976     |
+|Sarah.Lincoln@test.com  |13.91 |Sarah.Lincoln@test.com  |1959     |
+|Kevin.Brown@test.com    |-2.5  |Kevin.Brown@test.com    |1965     |
+|Laura.Martinez@test.com |4.05  |Laura.Martinez@test.com |1983     |
++------------------------+------+------------------------+---------+
+
+-------------------------------------------
+Batch: 280
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Craig.Lincoln@test.com|20.02|Craig.Lincoln@test.com|1962     |
++----------------------+-----+----------------------+---------+
+
+-------------------------------------------
+Batch: 281
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Emily.Green@test.com|14.98|Emily.Green@test.com|1988     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 282
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Lisa.Nelson@test.com|-4.57|Lisa.Nelson@test.com|1973     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 283
+-------------------------------------------
++------------------+------+------------------+---------+
+|customer          |score |email             |birthYear|
++------------------+------+------------------+---------+
+|Edward.Wu@test.com|-19.27|Edward.Wu@test.com|1961     |
++------------------+------+------------------+---------+
+
+-------------------------------------------
+Batch: 284
+-------------------------------------------
++-------------------------+-----+-------------------------+---------+
+|customer                 |score|email                    |birthYear|
++-------------------------+-----+-------------------------+---------+
+|Santosh.Phillips@test.com|-5.63|Santosh.Phillips@test.com|1960     |
++-------------------------+-----+-------------------------+---------+
+
+-------------------------------------------
+Batch: 285
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Andrew.Baker@test.com|-22.63|Andrew.Baker@test.com|1966     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 286
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Emily.Green@test.com|-5.64|Emily.Green@test.com|1988     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 287
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 288
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|William.Young@test.com|-17.69|William.Young@test.com|1976     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 289
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sean.Howard@test.com|15.09|Sean.Howard@test.com|1958     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 290
+-------------------------------------------
++-------------------------+-----+-------------------------+---------+
+|customer                 |score|email                    |birthYear|
++-------------------------+-----+-------------------------+---------+
+|Santosh.Phillips@test.com|11.53|Santosh.Phillips@test.com|1960     |
++-------------------------+-----+-------------------------+---------+
+
+-------------------------------------------
+Batch: 291
+-------------------------------------------
++------------------------+-----+------------------------+---------+
+|customer                |score|email                   |birthYear|
++------------------------+-----+------------------------+---------+
+|Daniel.Robinson@test.com|20.15|Daniel.Robinson@test.com|1969     |
++------------------------+-----+------------------------+---------+
+
+-------------------------------------------
+Batch: 292
+-------------------------------------------
++------------------+------+------------------+---------+
+|customer          |score |email             |birthYear|
++------------------+------+------------------+---------+
+|Edward.Wu@test.com|-29.28|Edward.Wu@test.com|1961     |
++------------------+------+------------------+---------+
+
+-------------------------------------------
+Batch: 293
+-------------------------------------------
++---------------------+------+---------------------+---------+
+|customer             |score |email                |birthYear|
++---------------------+------+---------------------+---------+
+|Andrew.Baker@test.com|-26.88|Andrew.Baker@test.com|1966     |
++---------------------+------+---------------------+---------+
+
+-------------------------------------------
+Batch: 294
+-------------------------------------------
++-----------------------+------+-----------------------+---------+
+|customer               |score |email                  |birthYear|
++-----------------------+------+-----------------------+---------+
+|Laura.Martinez@test.com|-11.57|Laura.Martinez@test.com|1983     |
++-----------------------+------+-----------------------+---------+
+
+-------------------------------------------
+Batch: 295
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sean.Howard@test.com|17.99|Sean.Howard@test.com|1958     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 296
+-------------------------------------------
++------------------+------+------------------+---------+
+|customer          |score |email             |birthYear|
++------------------+------+------------------+---------+
+|Lyn.Davis@test.com|-22.17|Lyn.Davis@test.com|1955     |
++------------------+------+------------------+---------+
+
+-------------------------------------------
+Batch: 297
+-------------------------------------------
++--------------------+-----+--------------------+---------+
+|customer            |score|email               |birthYear|
++--------------------+-----+--------------------+---------+
+|Sarah.Clark@test.com|16.23|Sarah.Clark@test.com|1957     |
++--------------------+-----+--------------------+---------+
+
+-------------------------------------------
+Batch: 298
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 299
+-------------------------------------------
++----------------------+------+----------------------+---------+
+|customer              |score |email                 |birthYear|
++----------------------+------+----------------------+---------+
+|Sarah.Lincoln@test.com|-14.35|Sarah.Lincoln@test.com|1959     |
++----------------------+------+----------------------+---------+
+
+-------------------------------------------
+Batch: 300
+-------------------------------------------
++---------------------------+-----+---------------------------+---------+
+|customer                   |score|email                      |birthYear|
++---------------------------+-----+---------------------------+---------+
+|Christopher.Wright@test.com|21.69|Christopher.Wright@test.com|1971     |
++---------------------------+-----+---------------------------+---------+
+
+-------------------------------------------
+Batch: 301
+-------------------------------------------
++--------+-----+-----+---------+
+|customer|score|email|birthYear|
++--------+-----+-----+---------+
++--------+-----+-----+---------+
+
+-------------------------------------------
+Batch: 302
+-------------------------------------------
++----------------------+-----+----------------------+---------+
+|customer              |score|email                 |birthYear|
++----------------------+-----+----------------------+---------+
+|Thomas.Garcia@test.com|7.34 |Thomas.Garcia@test.com|1978     |
++----------------------+-----+----------------------+---------+
+
+26/03/24 17:14:46 ERROR TransportChannelHandler: Connection to /192.168.117.6:52888 has been quiet for 300000 ms while there are outstanding requests. Assuming connection is dead; please adjust spark.network.timeout if this is wrong.
+26/03/24 17:14:46 WARN BlockManagerMaster: Failed to remove broadcast 5342 with removeFromMaster = true - Cannot receive any reply from null in 300 seconds. This timeout is controlled by spark.network.timeout
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from null in 300 seconds. This timeout is controlled by spark.network.timeout
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:157)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:157)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from null in 300 seconds
+	... 8 more
+26/03/24 17:14:46 WARN BlockManagerMaster: Failed to remove shuffle 1182 - Cannot receive any reply from null in 300 seconds. This timeout is controlled by spark.network.timeout
+org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply from null in 300 seconds. This timeout is controlled by spark.network.timeout
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216)
+	at scala.util.Try$.apply(Try.scala:192)
+	at scala.util.Failure.recover(Try.scala:216)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:326)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
+	at org.spark_project.guava.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:293)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$1.execute(ExecutionContextImpl.scala:136)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
+	at scala.concurrent.Promise$class.complete(Promise.scala:55)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:157)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:63)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:78)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:55)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:54)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:601)
+	at scala.concurrent.BatchingExecutor$class.execute(BatchingExecutor.scala:106)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:599)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
+	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:157)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.org$apache$spark$rpc$netty$NettyRpcEnv$$onFailure$1(NettyRpcEnv.scala:206)
+	at org.apache.spark.rpc.netty.NettyRpcEnv$$anon$1.run(NettyRpcEnv.scala:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.concurrent.TimeoutException: Cannot receive any reply from null in 300 seconds
+	... 8 more
+26/03/24 17:14:46 ERROR ContextCleaner: Error cleaning broadcast 5342
+org.apache.spark.rpc.RpcTimeoutException: Futures timed out after [300 seconds]. This timeout is controlled by spark.network.timeout
+	at org.apache.spark.rpc.RpcTimeout.org$apache$spark$rpc$RpcTimeout$$createRpcTimeoutException(RpcTimeout.scala:47)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:62)
+	at org.apache.spark.rpc.RpcTimeout$$anonfun$addMessageIfTimeout$1.applyOrElse(RpcTimeout.scala:58)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:76)
+	at org.apache.spark.storage.BlockManagerMaster.removeBroadcast(BlockManagerMaster.scala:155)
+	at org.apache.spark.broadcast.TorrentBroadcast$.unpersist(TorrentBroadcast.scala:321)
+	at org.apache.spark.broadcast.TorrentBroadcastFactory.unbroadcast(TorrentBroadcastFactory.scala:45)
+	at org.apache.spark.broadcast.BroadcastManager.unbroadcast(BroadcastManager.scala:66)
+	at org.apache.spark.ContextCleaner.doCleanupBroadcast(ContextCleaner.scala:238)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:194)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1$$anonfun$apply$mcV$sp$1.apply(ContextCleaner.scala:185)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.ContextCleaner$$anonfun$org$apache$spark$ContextCleaner$$keepCleaning$1.apply$mcV$sp(ContextCleaner.scala:185)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1302)
+	at org.apache.spark.ContextCleaner.org$apache$spark$ContextCleaner$$keepCleaning(ContextCleaner.scala:178)
+	at org.apache.spark.ContextCleaner$$anon$1.run(ContextCleaner.scala:73)
+Caused by: java.util.concurrent.TimeoutException: Futures timed out after [300 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:223)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:227)
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:220)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	... 12 more
+26/03/24 17:14:46 ERROR TaskSchedulerImpl: Lost executor 2 on 192.168.117.6: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+26/03/24 17:14:46 WARN TaskSetManager: Lost task 1.0 in stage 1784.0 (TID 2398, 192.168.117.6, executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+26/03/24 17:14:46 WARN TaskSetManager: Lost task 0.0 in stage 1784.0 (TID 2397, 192.168.117.6, executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+26/03/24 17:14:46 ERROR TransportClient: Failed to send RPC RPC 6534636141059765935 to /192.168.117.6:52888: java.nio.channels.ClosedChannelException
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.newClosedChannelException(AbstractChannel.java:958)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:866)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:716)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:708)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1700(AbstractChannelHandlerContext.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1102)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1149)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1073)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:510)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:518)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+26/03/24 17:14:46 WARN BlockManagerMasterEndpoint: Error trying to remove broadcast 5356 from block manager BlockManagerId(2, 192.168.117.6, 42429, None)
+java.io.IOException: Failed to send RPC RPC 6534636141059765935 to /192.168.117.6:52888: java.nio.channels.ClosedChannelException
+	at org.apache.spark.network.client.TransportClient$RpcChannelListener.handleFailure(TransportClient.java:362)
+	at org.apache.spark.network.client.TransportClient$StdChannelListener.operationComplete(TransportClient.java:339)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:577)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:551)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:490)
+	at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:615)
+	at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:608)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.safeSetFailure(AbstractChannel.java:994)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.write(AbstractChannel.java:866)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.write(DefaultChannelPipeline.java:1379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:716)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:708)
+	at io.netty.channel.AbstractChannelHandlerContext.access$1700(AbstractChannelHandlerContext.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.write(AbstractChannelHandlerContext.java:1102)
+	at io.netty.channel.AbstractChannelHandlerContext$WriteAndFlushTask.write(AbstractChannelHandlerContext.java:1149)
+	at io.netty.channel.AbstractChannelHandlerContext$AbstractWriteTask.run(AbstractChannelHandlerContext.java:1073)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:510)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:518)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$6.run(SingleThreadEventExecutor.java:1044)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.newClosedChannelException(AbstractChannel.java:958)
+	... 15 more
+26/03/24 17:14:46 WARN BlockManagerMasterEndpoint: No more replicas available for broadcast_5342_piece0 !

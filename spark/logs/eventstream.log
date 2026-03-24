@@ -1,0 +1,238 @@
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/spark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.apache.spark#spark-sql-kafka-0-10_2.11 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-395ccd40-64f2-46ca-af14-8199feaea1c0;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.11;2.4.5 in central
+	found org.apache.kafka#kafka-clients;2.0.0 in central
+	found org.lz4#lz4-java;1.4.0 in central
+	found org.xerial.snappy#snappy-java;1.1.7.3 in central
+	found org.slf4j#slf4j-api;1.7.16 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+:: resolution report :: resolve 514ms :: artifacts dl 11ms
+	:: modules in use:
+	org.apache.kafka#kafka-clients;2.0.0 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.11;2.4.5 from central in [default]
+	org.lz4#lz4-java;1.4.0 from central in [default]
+	org.slf4j#slf4j-api;1.7.16 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.7.3 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   6   |   0   |   0   |   0   ||   6   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-395ccd40-64f2-46ca-af14-8199feaea1c0
+	confs: [default]
+	0 artifacts copied, 6 already retrieved (0kB/11ms)
+26/03/24 16:17:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+26/03/24 16:17:40 INFO SparkContext: Running Spark version 2.4.5
+26/03/24 16:17:40 INFO SparkContext: Submitted application: STEDI Event Stream
+26/03/24 16:17:40 INFO SecurityManager: Changing view acls to: root
+26/03/24 16:17:40 INFO SecurityManager: Changing modify acls to: root
+26/03/24 16:17:40 INFO SecurityManager: Changing view acls groups to: 
+26/03/24 16:17:40 INFO SecurityManager: Changing modify acls groups to: 
+26/03/24 16:17:40 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+26/03/24 16:17:40 INFO Utils: Successfully started service 'sparkDriver' on port 35673.
+26/03/24 16:17:41 INFO SparkEnv: Registering MapOutputTracker
+26/03/24 16:17:41 INFO SparkEnv: Registering BlockManagerMaster
+26/03/24 16:17:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/03/24 16:17:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/03/24 16:17:41 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b58fce8d-5148-4294-bf80-ed6d02566ea7
+26/03/24 16:17:41 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+26/03/24 16:17:41 INFO SparkEnv: Registering OutputCommitCoordinator
+26/03/24 16:17:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/03/24 16:17:41 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://d597be001265:4040
+26/03/24 16:17:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar at spark://d597be001265:35673/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar with timestamp 1774369061279
+26/03/24 16:17:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar at spark://d597be001265:35673/jars/org.apache.kafka_kafka-clients-2.0.0.jar with timestamp 1774369061280
+26/03/24 16:17:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://d597be001265:35673/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1774369061281
+26/03/24 16:17:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar at spark://d597be001265:35673/jars/org.lz4_lz4-java-1.4.0.jar with timestamp 1774369061281
+26/03/24 16:17:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar at spark://d597be001265:35673/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar with timestamp 1774369061281
+26/03/24 16:17:41 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://d597be001265:35673/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1774369061281
+26/03/24 16:17:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar at spark://d597be001265:35673/files/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar with timestamp 1774369061301
+26/03/24 16:17:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar to /tmp/spark-56372a9a-7a70-454c-a19e-4aca18fcbd98/userFiles-fc4de0d8-d351-4810-9087-ec2d9fd161a3/org.apache.spark_spark-sql-kafka-0-10_2.11-2.4.5.jar
+26/03/24 16:17:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar at spark://d597be001265:35673/files/org.apache.kafka_kafka-clients-2.0.0.jar with timestamp 1774369061322
+26/03/24 16:17:41 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-2.0.0.jar to /tmp/spark-56372a9a-7a70-454c-a19e-4aca18fcbd98/userFiles-fc4de0d8-d351-4810-9087-ec2d9fd161a3/org.apache.kafka_kafka-clients-2.0.0.jar
+26/03/24 16:17:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://d597be001265:35673/files/org.spark-project.spark_unused-1.0.0.jar with timestamp 1774369061350
+26/03/24 16:17:41 INFO Utils: Copying /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-56372a9a-7a70-454c-a19e-4aca18fcbd98/userFiles-fc4de0d8-d351-4810-9087-ec2d9fd161a3/org.spark-project.spark_unused-1.0.0.jar
+26/03/24 16:17:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar at spark://d597be001265:35673/files/org.lz4_lz4-java-1.4.0.jar with timestamp 1774369061361
+26/03/24 16:17:41 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.4.0.jar to /tmp/spark-56372a9a-7a70-454c-a19e-4aca18fcbd98/userFiles-fc4de0d8-d351-4810-9087-ec2d9fd161a3/org.lz4_lz4-java-1.4.0.jar
+26/03/24 16:17:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar at spark://d597be001265:35673/files/org.xerial.snappy_snappy-java-1.1.7.3.jar with timestamp 1774369061372
+26/03/24 16:17:41 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.7.3.jar to /tmp/spark-56372a9a-7a70-454c-a19e-4aca18fcbd98/userFiles-fc4de0d8-d351-4810-9087-ec2d9fd161a3/org.xerial.snappy_snappy-java-1.1.7.3.jar
+26/03/24 16:17:41 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://d597be001265:35673/files/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1774369061390
+26/03/24 16:17:41 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-56372a9a-7a70-454c-a19e-4aca18fcbd98/userFiles-fc4de0d8-d351-4810-9087-ec2d9fd161a3/org.slf4j_slf4j-api-1.7.16.jar
+26/03/24 16:17:41 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+26/03/24 16:17:41 INFO TransportClientFactory: Successfully created connection to spark-master/192.168.117.2:7077 after 34 ms (0 ms spent in bootstraps)
+26/03/24 16:17:41 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20260324161741-0002
+26/03/24 16:17:41 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20260324161741-0002/0 on worker-20260324161002-192.168.117.6-37165 (192.168.117.6:37165) with 2 core(s)
+26/03/24 16:17:41 INFO StandaloneSchedulerBackend: Granted executor ID app-20260324161741-0002/0 on hostPort 192.168.117.6:37165 with 2 core(s), 1024.0 MB RAM
+26/03/24 16:17:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37635.
+26/03/24 16:17:41 INFO NettyBlockTransferService: Server created on d597be001265:37635
+26/03/24 16:17:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/03/24 16:17:41 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20260324161741-0002/0 is now RUNNING
+26/03/24 16:17:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, d597be001265, 37635, None)
+26/03/24 16:17:41 INFO BlockManagerMasterEndpoint: Registering block manager d597be001265:37635 with 366.3 MB RAM, BlockManagerId(driver, d597be001265, 37635, None)
+26/03/24 16:17:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, d597be001265, 37635, None)
+26/03/24 16:17:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, d597be001265, 37635, None)
+26/03/24 16:17:42 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+26/03/24 16:17:42 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/spark-warehouse/').
+26/03/24 16:17:42 INFO SharedState: Warehouse path is 'file:/spark-warehouse/'.
+26/03/24 16:17:42 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++--------------------+------+
+|            customer| score|
++--------------------+------+
+|Amanda.King@test.com|  4.34|
+|Amanda.King@test.com|-13.67|
+|Lisa.Nelson@test.com|-21.08|
+|Karen.White@test.com| 27.71|
+|Gail.Spencer@test...| 21.72|
+|Amanda.King@test.com| -16.9|
+|Lisa.Nelson@test.com| -23.6|
+|Lisa.Nelson@test.com|  2.32|
+|Amanda.King@test.com| 14.04|
+|Kevin.Brown@test.com| 10.47|
+|Jennifer.Hall@tes...| -4.01|
+|Amanda.King@test.com|   6.8|
+|Karen.White@test.com| 48.52|
+|Lisa.Nelson@test.com| 25.61|
+|Laura.Martinez@te...| 36.35|
+|Kevin.Brown@test.com| -2.29|
+|Laura.Martinez@te...|  4.91|
+|Lisa.Nelson@test.com| 14.63|
+|Sarah.Lincoln@tes...| 47.67|
+|Michelle.Lee@test...|-37.84|
++--------------------+------+
+only showing top 20 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++--------------------+------+
+|            customer| score|
++--------------------+------+
+|Laura.Martinez@te...|-14.94|
++--------------------+------+
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++--------------------+------+
+|            customer| score|
++--------------------+------+
+|Michelle.Lee@test...|-29.82|
++--------------------+------+
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|William.Young@tes...| 0.24|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++------------------+-----+
+|          customer|score|
++------------------+-----+
+|Lyn.Davis@test.com| 9.04|
++------------------+-----+
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Stephanie.Lopez@t...| 4.99|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Phillips@...|19.03|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Sean.Howard@test.com|25.19|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Lisa.Nelson@test.com| 7.77|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++--------------------+------+
+|            customer| score|
++--------------------+------+
+|Matthew.Scott@tes...|-13.56|
++--------------------+------+
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|William.Young@tes...|25.52|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++--------------------+------+
+|            customer| score|
++--------------------+------+
+|Kevin.Brown@test.com|-14.52|
++--------------------+------+
+
+-------------------------------------------
+Batch: 12
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Santosh.Fibonnaci...|-6.64|
++--------------------+-----+
+
+-------------------------------------------
+Batch: 13
+-------------------------------------------
++--------------------+------+
+|            customer| score|
++--------------------+------+
+|Santosh.Fibonnaci...|-49.45|
++--------------------+------+
+
+-------------------------------------------
+Batch: 14
+-------------------------------------------
++--------------------+-----+
+|            customer|score|
++--------------------+-----+
+|Spencer.Davis@tes...|10.78|
++--------------------+-----+
+

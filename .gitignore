@@ -14,8 +14,7 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Spark logs (generated at runtime)
-spark/logs/*.log
+# Spark logs
 spark/logs/.ipynb_checkpoints/
 
 # Temp / OS
